@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package dao;
+package model.db;
 
 import java.io.Serializable;
 import java.sql.Connection;
@@ -12,7 +12,8 @@ import java.sql.SQLException;
 
 /**
  *
- * @author Dell Inspiron14
+ * @author longpd
+ *
  */
 public class DatabaseConnection implements Serializable{
     public static Connection getDbConnection() throws ClassNotFoundException{
