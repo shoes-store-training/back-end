@@ -20,7 +20,7 @@ public class DatabaseConnection implements Serializable{
         Connection conn = null;
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            conn = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databaseName=snkrkorea", "shoe", "shoe");
+            conn = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databaseName=snkrkorea", "sa", "sa");
         } catch (SQLException ex) {
             System.err.println("Cannot connect database, " + ex);
         }
