@@ -1,0 +1,705 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #f4f4f4;
+}
+
+.container{
+    background-color: #fff;
+}
+.clearfix {
+  content: "";
+  display: table;
+  clear: both;  
+}
+
+#site-header, #site-footer {
+    background: #eee;
+}
+
+#site-header {
+    margin: 0 0 10px 0;
+    min-height: 200px;
+    text-align: center;
+}
+
+#site-header h1 {
+    font-size: 31px;
+    font-weight: 300;
+    padding: 40px 0;
+    position: relative;
+    margin: 0;
+}
+
+/* a {
+    color: #000;
+    text-decoration: none;
+
+    -webkit-transition: color .2s linear;
+    -moz-transition: color .2s linear;
+    -ms-transition: color .2s linear;
+    -o-transition: color .2s linear;
+    transition: color .2s linear;
+} */
+
+
+.container {
+    font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#cart {
+    display: block;
+    float: left;
+}
+
+#cart a {
+    text-decoration: none;
+    -webkit-transition: color .2s linear;
+    -moz-transition: color .2s linear;
+    -ms-transition: color .2s linear;
+    -o-transition: color .2s linear;
+    transition: color .2s linear;
+}
+
+.card-form{
+    border-left: solid 1px rgba(0, 0, 0, 0.30);
+    border-bottom: solid 1px rgba(0, 0, 0, 0.30);
+    line-height: 2;
+    box-sizing: inherit;
+    width: 90%;
+    padding: 20px 30px;
+    margin: 20px;
+    transition: .2s ease-in-out;
+}
+
+.card-form span{
+    line-height: 1.5;
+}
+
+.card-address-form{
+    display: block;
+    border: solid 1px rgba(0, 0, 0, 0.30);
+    border-radius: 5px;
+    box-sizing: inherit;
+    width: 95%;
+    padding: 20px 30px;
+    margin: 20px 20px 20px 30px;
+    transition: .2s ease-in-out;
+}
+.card-address-form:hover{
+    border: solid 1px rgba(0, 0, 0, 0.30);
+    box-shadow: 0 5px 15px 2px rgba(0, 0, 0, 0.1);
+    transform: rotateY(10px);
+}
+input {
+    outline: none;
+    margin: 0;
+    border: none;
+    width: 90%;
+  }
+
+.title-cart {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 400;
+    text-align: left;
+    margin: 15px 0 30px 20px;
+    border-bottom: 2px solid #6D6D6D;
+}
+
+.product.removed {
+    margin: 0;
+    text-align: center;
+    opacity: 0;
+    /* background-color: red; */
+}
+
+.product {
+   display: table;
+    border-right: 0px;
+    margin: 5px 0;
+    width: 100%;
+    position: relative;
+    padding: 0 15px;
+
+    -webkit-transition: margin .2s linear, opacity .2s linear;
+    -moz-transition: margin .2s linear, opacity .2s linear;
+    -ms-transition: margin .2s linear, opacity .2s linear;
+    -o-transition: margin .2s linear, opacity .2s linear;
+    transition: margin .2s linear, opacity .2s linear;
+}
+
+.product img {
+    width: 100%;
+    height: 100%;
+}
+
+.product header, .product .content {
+    background-color: #fff;
+    float: left;
+}
+
+.product header {
+    background: #000;
+    margin: 0 0 20px 0;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 110px;
+    height: 110px;
+    margin-top: 17px;
+
+}
+
+.product header:hover img {
+    opacity: .9;
+}
+
+.product header:hover h3 {
+    bottom: 25%;
+}
+
+.product header h3 {
+    background: rgb(128, 128, 128);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0px 0px 0px 0px;
+    padding: 10px 30px 10px 25px;
+    position: absolute;
+    bottom: -60px;
+    right: 0;
+    left: 0;
+    text-align: center;
+    transition: bottom .15s linear;
+}
+
+.remove {
+    cursor: pointer;
+}
+
+
+.product .content {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    /* height: 110px; */
+    padding: 0 20px;
+    width: 76%;
+    font-size: 14px;
+    text-align: left;
+}
+
+.product h1 {
+    color: #495057;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 17px 0 20px 0;
+}
+
+.product footer.content {
+    height: 50px;
+    margin: 6px 0 0 0;
+    padding: 0;
+    background: none;
+
+}
+
+.product footer .price {
+    background: #eee;
+    color: #000;
+    float: right;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 38px;
+    margin: 0;
+    margin-left: 30px;
+    padding: 0 30px;    
+}
+
+
+.qt, .qt-plus, .qt-minus {
+    display: block;
+    float: left;
+    margin-left: 15px;
+    /* transition: linear .5s; */
+}
+
+.qt {
+    font-size: 19px;
+    line-height: 37px;
+    width: 35px;
+    text-align: center;
+    border: 1px #000;
+}
+
+.qt-plus, .qt-minus {
+    background: #fcfcfc;
+    border: 1px solid rgb(170, 170, 170);
+    font-size: 22px;
+    font-weight: 300;
+    height: 38px;
+    width: 42px;
+    text-align: center;
+    padding-top: 5px;
+    -webkit-transition: background .2s linear;
+    -moz-transition: background .2s linear;
+    -ms-transition: background .2s linear;
+    -o-transition: background .2s linear;
+    transition: background .2s linear;
+}
+
+.qt-plus:hover, .qt-minus:hover {
+    background: rgb(110, 110, 110);
+    border:none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.qt-plus {
+    /* line-height: 30px; */
+}
+
+.qt-minus {
+    /* line-height: 30px; */
+}
+
+#site-footer {
+    margin: 30px 0 0 0;
+    padding: 40px;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.p-10{
+    padding:10px;
+}
+.p-15{
+    padding:15px;
+}
+.p-0{
+    padding:0;
+}
+.p-bot-10{
+    padding-bottom:10px;
+}
+.p-top-10{
+    padding-top:10px;
+}
+.p-right-30{
+    padding-right: 30px;
+}
+.my-btn {
+    background: #343a40;
+    border-radius: 30px;
+    cursor: pointer;
+    display: block;
+    color: #fff;
+    font-size: 20px;
+    padding: 16px 0;
+    height: 60px;
+    width: 290px;
+    text-align: center;
+    transition: all .3s linear;
+}
+
+
+.my-btn:link, .my-btn:visited {
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: -.015em;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    -webkit-transition: all 0.25s linear;
+    -moz-transition: all 0.25s linear;
+    -ms-transition: all 0.25s linear;
+    -o-transition: all 0.25s linear;
+    transition: all 0.25s linear;
+}
+
+.my-btn:hover, .my-btn:active, .my-btn.previous:hover, .my-btn.promoCode:hover {
+    border: 1px solid rgb(95, 95, 95);
+    background: #fff;
+    color:  rgb(95, 95, 95);
+}
+
+.promoCode .my-btn {
+font-size: .9em;
+padding: .5em 2em;
+}
+
+.my-btn.continue {
+    width: 80%;
+    text-align: center;
+    margin: 35px 10% 10px 10%;
+    position: relative;
+}
+
+.my-btn.continue:after, .promoCode .my-btn:after {
+    content: "\276f \276f";
+    padding: .5em;
+    position: relative;
+    right: 0;
+    -webkit-transition: all 0.15s linear;
+    -moz-transition: all 0.15s linear;
+    -ms-transition: all 0.15s linear;
+    -o-transition: all 0.15s linear;
+    transition: all 0.15s linear;
+    }
+
+.my-btn.previous {
+    background: #777;
+    width: 40%;
+    text-align: center;
+    margin: 10px 10%;
+    position: relative;
+}
+
+.my-btn.previous::before {
+    content: "\276e \276e";
+    padding: .5em;
+    position: relative;
+    right: 0;
+    -webkit-transition: all 0.15s linear;
+    -moz-transition: all 0.15s linear;
+    -ms-transition: all 0.15s linear;
+    -o-transition: all 0.15s linear;
+    transition: all 0.15s linear;
+}
+
+.my-btn.previous::after {
+    display: none;
+}
+
+.promoCode {
+    width: 100%;
+}
+
+.promo-code-tag {
+    display: inline-block;
+    width: 50%;
+    font-size:14px;
+    background: rgb(78, 78, 78);
+    height: 35px;
+    color:#dadada;
+    margin: 0px 0 10px 35px;
+    padding: 0px 0 10px 20px;
+    transition: all 0.15s linear;
+}
+
+.promo-code-tag:hover {
+    background: rgb(192, 192, 192);
+    color: #000
+}
+
+.promo-code-tag::before{
+    position: relative;
+    height: 35px;
+    left: -20px;
+    background-color: rgb(119, 119, 119);
+    content: "20%";
+    font-size:14px;
+    display: inline-block;
+    width:60px;
+    color: white;
+    padding: 7px 0px 10px 15px;
+
+}
+
+.card-label {
+    text-transform: capitalize;
+    display: block;
+    width: 100%;
+    font-style: italic;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 10px 0;
+    color: #000B4F;
+}
+.card-field-label {
+    text-transform: capitalize;
+    text-align: center;
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 10px 0;
+    border-bottom: 1px solid #6D6D6D;
+}
+
+.promoCode input {
+    width: 75%;
+    font-size: 1em;
+    padding: .5em;
+    display: inline-block;
+    left: 0;
+    border: 1px solid #dadada;
+}
+
+.promoCode a.my-btn {
+    display: inline-block;
+    width: 20%;
+    height: 35px;
+    padding: .77em 0.3em;
+    border-radius: 5px;
+    text-align: center;
+
+}
+
+
+.final {
+    font-weight: bold;
+    color:red;
+}
+
+.card-property {
+    font-size: 16px;
+    display: inline-block;
+    width:50%; 
+    text-transform: uppercase;
+    color: #777;
+    padding-left:10px;
+    text-align: left;
+}
+
+.card-value {
+    font-size: 16px;
+    display: inline-block;
+    letter-spacing: -.025em;
+    width: 50%;
+    padding-right:10px;
+    text-align: right;
+}
+.card-fill{
+    font-size: 16px;
+    display: inline-block;
+    letter-spacing: -.025em;
+    width: 95%;
+    padding:0 20px;
+}
+
+.box-shadow {
+    background: #fff;
+    transition: .2s ease-in-out;
+
+}
+.box-shadow:hover {
+    opacity:1;
+    box-shadow: 0 5px 15px 2px rgba(0, 0, 0, 0.1);
+}
+
+.progressbar{    
+    padding: 20px 0 20px 0;
+    margin-bottom: 20px;
+}
+
+.progressbar button{
+    font-size: 35px;
+    border:none;
+    text-align: center;
+    opacity: 1;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    left: 0%;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    margin: 10px 0px 10px 18.7%;   
+    color: #fff;
+    transition: all .3s linear;
+}
+
+.progressbar button::before{
+    content: '';
+    background-color: #ddd;
+    height: 4px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 100px;
+    width: 233px;
+}
+
+.progressbar button:first-child::before{
+    content:none;
+}
+
+
+.progressbar button:hover{
+    box-shadow: 0 5px 15px 2px rgba(0, 0, 0, 0.4);
+}
+
+
+.footer {
+    clear: both;
+    border-top: 1px solid #323232;
+    padding: 30px;
+    font-size: 22px;
+    text-align: center;
+    margin-top: 60px;
+}
+.header {
+    clear: both;
+    border-bottom: 1px solid #323232;
+    padding: 30px;
+    font-size: 22px;
+    text-align: center;
+    }
+
+.stage-display-card{
+    min-height: 900px;
+    padding:0;
+    margin:0;
+}
+
+.payment-method-card{
+    text-align: center;
+    border: solid 1px rgba(0, 0, 0, 0.15);
+    padding: 30px 10px 30px 10px;
+    border-radius: 5px;
+    margin: 0 0 30px 0;  
+    min-height: 150px;
+    width: 100%;
+    transition: .2s ease-in-out;
+    color: #777;
+}
+.payment-method-card:focus{
+    background-color: #777;
+    color:white;
+}
+
+
+.payment-method-card:hover{
+    box-shadow: 3px 5px 5px 4px rgba(0, 0, 0, 0.15);  
+}
+
+.tab-button{
+    background: #777;
+}
+
+.tab-button-active{
+    background: linear-gradient(to top right, rgba(0, 206, 209, 0.685) 0%, #00008093 100%);
+}
+
+.tab-content{
+    position: relative;
+    display: none;
+    left: -100%;
+    animation: fadeEffect 1.5s;
+
+}
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.tab-content-active{
+    left:0;
+    display: block; 
+}
+.card-price{
+    font-size: 16px;
+    line-height: 37px;
+    text-align: center;
+    border: 1px #000;
+    text-align: center;
+}
+
+.payment-img{
+    font-size: 45px;
+    height: 45px;
+    width: 107px;
+    margin: 10px auto;
+    margin-bottom:20px; 
+}
+
+.visa-background{
+    
+    background-position: center center;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-image: url(../img/pm_cc.png);
+}
+.vtp-background{
+    
+    background-position: center center;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-image: url(../img/vtp.png);
+}
+
+.gray-777{
+    background: #777;
+}
+
+.fa-icon-pregress{
+    color:white;
+    font-size: 25px;
+}
+
+.fa-icon-progress:hover .fa-icon-progress:focus{
+    color: #555;
+}
+
+.col-right-space{
+    margin-top: 31px;
+}
+
+.full-price{
+    float: left;
+    min-width: 100px;
+    margin-top: 28px;
+    border: 1px solid rgb(185, 185, 185);
+    border-radius: 25px;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 15px 20px;
+    text-align: right;
+    transition: ease 0.1s;
+}
+
+.minused {
+    transform: scale(0.9);
+}
+
+.added {
+    transform: scale(1.1);
+}
+
+.product-counter {
+    padding: 2px 0 0 1px;
+    font-size: 18px;
+    font-weight: 400;
+    content: '0';
+    position: absolute;
+    transform: translate(0, -100%);
+    width: 25px;
+    height: 25px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+    background: #f55a79;
+}
+.holder {
+    display: block;
+  }
+.holder img {
+max-height: 90px;
+max-width: 190px;
+object-fit: cover;
+}

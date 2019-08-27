@@ -1,0 +1,242 @@
+/* COMMON */
+.header, .footer {
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+.header {
+    border-bottom: 1px solid #323232;
+}
+
+.footer {
+    clear: both;
+    border-top: 1px solid #323232;
+}
+
+.container {
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+}
+
+.title-header {
+    margin: auto;
+    margin-top: 10px;
+    line-height: 35px;
+    font-weight: bolder;
+    font-size: 110%;
+    color: #323232;
+    border-bottom: 1px solid #6D6D6D;
+}
+
+.left-aside, .container {
+    padding-left: 30px;
+}
+
+/* LEFT ASIDE BAR */
+.caterogy-title, .filter-title {
+    font-size: 90%;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    color: #323232;
+}
+
+.caterogy-title:hover, .caterogy-title:active, .filter-title:hover, .filter-title:active {
+    text-decoration: none;
+    color: black;
+}
+
+.filter-icon {
+    position: absolute;
+    right: 5%;
+    top: auto;
+}
+
+.filter-content {
+    padding-left: 15px;
+}
+
+.filter-link {
+    margin-top: 5px;
+    font-size: 80%;
+    text-decoration: none;
+    cursor: pointer;
+    color: #6D6D6D;
+    display: block;
+}
+
+.filter-link:hover, .filter-link:active {
+    text-decoration: none!important;
+}
+
+input[type=checkbox] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    ;
+}
+
+.fa-square {
+    color: #323232;
+    font-weight: bold;
+}
+
+.fa-check-square {
+    color: green;
+    font-weight: bold;
+}
+
+.fa-star {
+    color: orange;
+}
+
+.fa-star-no-color {
+    color: gray;
+}
+
+input[type=number] {
+    width: 40%!important;
+    display: inline-block;
+}
+
+.filter-size-submit {
+    color: #EBEBEB;
+    background-color: #323232;
+    cursor: pointer;
+}
+
+.filter-size-submit:hover, .filter-size-submit:active {
+    color: #EBEBEB;
+    background-color: black;
+    border: 1px solid black;
+    transform: scale(1.05);
+}
+
+/* CONTAINER */
+
+.sort-content {
+    text-align: right;
+}
+
+.sort-content-btn {
+    background-color: #EBEBEB;
+    color: black;
+}
+
+.sort-content-btn:hover, .sort-content-btn:active {
+    color: #EBEBEB;
+    background-color: black;
+    font-weight: bold;
+}
+
+.product-list {
+    margin-top: 10px;
+}
+
+.product-box {
+    z-index: 10;
+    margin-top: 20px;
+    background-color: white;
+    transition: all 1s;
+}
+
+.product-box:hover, .product-box:active {
+    z-index: 100;
+    box-shadow: 1px 1px 5px;
+    transform: scale(1.05);
+}
+
+.product-box:hover .carousel-indicators, .product-box:active .carousel-indicators {
+    display: inline-block;
+}
+
+.product-image {
+    width: 100%;
+    max-width: 200px;
+    margin: 5px auto;
+}
+
+.carousel-indicators {
+    display: none;
+    bottom: 0;
+}
+
+.carousel-indicators li {
+    background-color: #323232;
+    border: 1px solid #323232;
+    width: 15%!important;
+    height: 0.5vh!important;
+}
+
+.carousel-indicators li[class=active] {
+    background-color: red;
+    border: 1px solid red;
+    height: 0.7vh!important;
+}
+
+.product-buynow {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    color: #323232;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.product-buynow:hover, .product-buynow:active {
+    transform: scale(1.2);
+    color: red;
+}
+
+.product-rating {
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    font-size: 90%;
+}
+
+.product-link {
+    text-decoration: none;
+    color: #323232;
+}
+
+.product-link:hover, .product-link:active {
+    text-decoration: none;
+    color: black;
+}
+
+.product-title {
+    height: 50px;
+    color: #000B4F;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    border-bottom: 1px solid #6D6D6D;
+    overflow: hidden;
+}
+
+.product-detail {
+    display: block;
+    font-size: 85%;
+    font-weight: lighter;
+}
+
+.pagination-bar {
+    position: relative;
+    margin: 10px auto;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.pagination .page-item a {
+    color: #323232;
+}
+
+.pagination .active a {
+    background-color: #6D6D6D;
+    border: 1px solid #6D6D6D;
+    color: #EBEBEB;
+}
