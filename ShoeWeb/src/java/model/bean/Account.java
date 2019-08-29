@@ -15,13 +15,22 @@ public class Account {
     private String fullName;
     private String phoneNumber;
     private String email;
-    private boolean gender;
+    private String gender;
     private String address;
+    private boolean isSaved;
     
     public Account() {
     }
 
-    
+    public Account(String userName, String password, String fullName, String phoneNumber, String email, String gender, String address) {
+        this.userName = userName;
+        this.password = password;
+        this.fullName = fullName;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+        this.gender = gender;
+        this.address = address;
+    }
     
     public String getUserName() {
         return userName;
@@ -63,11 +72,11 @@ public class Account {
         this.email = email;
     }
 
-    public boolean isGender() {
+    public String getGender() {
         return gender;
     }
 
-    public void setGender(boolean gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
 
@@ -78,8 +87,13 @@ public class Account {
     public void setAddress(String address) {
         this.address = address;
     }
-    
-    public boolean checkLogin(String userName, String pass){
-        return (userName.equals(this.userName))&& (pass.equals(this.password));              
+
+    public boolean isIsSaved() {
+        return isSaved;
     }
+
+    public void setIsSaved(boolean isSaved) {
+        this.isSaved = isSaved;
+    }
+    
 }

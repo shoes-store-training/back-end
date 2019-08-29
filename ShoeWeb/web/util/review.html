@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+        crossorigin="anonymous"></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/review.css'>
+</head>
+
+<body>
+    <div class="detail-review">
+        <div class="row detail-review-title">Reviews</div>
+        <div class="row detail-review-write">
+            <a class="row detail-review-write-link" data-toggle="modal" data-target="#detail-review-write-modeal">Write
+                a review</a>
+            <div class="modal fade" id="detail-review-write-modeal" role="dialog">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="text-right close modal-button" data-dismiss="modal">
+                                <i class="fas fa-times-circle"></i>
+                            </button>
+                            <h4 class="modal-title">Write review</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form method="get">
+                                <div class="form-check">
+                                    <div class="col-sm-3 review-input-title">Your rating:</div>
+                                    <div class="review-input-content">
+                                        <label for="rating-1" class="review-input-label">
+                                            <span class="fa fa-star star-rating star-rating-checked"
+                                                onclick="ratingStar(1);"></span>
+                                        </label>
+                                        <input type="radio" id="rating-1" class="review-rating-input" value="1"
+                                            name="review-rating" required>
+                                        <label for="rating-2" class="review-input-label">
+                                            <span class="fa fa-star star-rating star-rating-checked"
+                                                onclick="ratingStar(2);"></span>
+                                        </label>
+                                        <input type="radio" id="rating-2" class="review-rating-input" value="2"
+                                            name="review-rating">
+                                        <label for="rating-3" class="review-input-label">
+                                            <span class="fa fa-star star-rating star-rating-checked"
+                                                onclick="ratingStar(3);"></span>
+                                        </label>
+                                        <input type="radio" id="rating-3" class="review-rating-input" value="3"
+                                            name="review-rating">
+                                        <label for="rating-4" class="review-input-label">
+                                            <span class="fa fa-star star-rating star-rating-checked"
+                                                onclick="ratingStar(4);"></span>
+                                        </label>
+                                        <input type="radio" id="rating-4" class="review-rating-input" value="4"
+                                            name="review-rating">
+                                        <label for="rating-5" class="review-input-label">
+                                            <span class="fa fa-star star-rating star-rating-checked"
+                                                onclick="ratingStar(5);"></span>
+                                        </label>
+                                        <input type="radio" id="rating-5" class="review-rating-input" value="5"
+                                            name="review-rating" checked>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-3 review-input-title">Your subject:</div>
+                                    <div class="review-input-content">
+                                        <label for="review-subject" class="review-input-label"></label>
+                                        <textarea id="review-subject" class="review-input" name="review-subject"
+                                            placeholder="Input your subject" cols="50" rows="1" required></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-3 review-input-title">Your content:</div>
+                                    <div class="review-input-content">
+                                        <label for="review-content" class="review-input-label"></label>
+                                        <textarea id="review-content" class="review-input" name="review-content"
+                                            placeholder="Input your content" cols="50" rows="5" required></textarea>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn review-write-submit">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="row detail-review-list">
+            <div class="detail-review-read">
+                <div class="detail-review-subject">The best Converse #1</div>
+                <p>
+                    <span class="detail-review-rating">
+                        <span class="fa fa-star star-rating-checked"></span>
+                        <span class="fa fa-star star-rating-checked"></span>
+                        <span class="fa fa-star star-rating-checked"></span>
+                        <span class="fa fa-star star-rating-checked"></span>
+                        <span class="fa fa-star star-rating-checked"></span>
+                    </span>
+                    <span class="detail-review-user-name">abcd1234</span>
+                    <span>-</span>
+                    <span class="detail-review-date">09 August 2019</span>
+                </p>
+                <p class="detail-review-content">Some of the best shoes Converse always with the best</p>
+            </div>
+            <a class="row detail-review-read-link" data-toggle="modal" data-target="#detail-review-read-modal">More
+                reviews</a>
+        </div>
+    </div>
+    <div class="modal fade" id="detail-review-read-modal" role="dialog" aria-hidden="true">
+        <div class="modal-dialog detail-review-read-full-modal" role="document">
+            <div class="modal-content">
+                <div class="modal-header align-middle">
+                    <button type="button" class="text-right close modal-button" data-dismiss="modal">
+                        <i class="fas fa-times-circle"></i>
+                    </button>
+                    <a class="col-sm-4 modal-title-link" data-dismiss="modal">
+                        <img src="../img/converse-chucky-taylor-all-star-boardies-yellow.jpg" alt=""
+                            class="col-sm-3 review-modal-image">
+                        <img src="../img/converse-chucky-taylor-all-star-boardies-white.jpg" alt=""
+                            class="col-sm-3 review-modal-image">
+                        <h4 class="col-sm-8 modal-title">
+                            180 USD <br>
+                            <b>Converse Chucky Taylor All Star Boardies</b>
+                        </h4>
+                    </a>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-6 text-uppercase text-center detail-review-more-title">
+                            Total 5 reviews
+                            </br>
+                            Average 5 <span class="fa fa-star star-rating-checked"></span>
+                        </div>
+                    </div>
+                    <div class="row sort-review">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle text-uppercase sort-review-btn"
+                                type="button" data-toggle="dropdown">
+                                Sort by
+                                <i class="fas fa-angle-down"></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-right dropdown-sort">
+                                <li class="dropdown-item-sort"><a href="?sort=newest">Newest</a></li>
+                                <li class="dropdown-item-sort"><a href="?sort=highest-rating">Highest rating</a></li>
+                                <li class="dropdown-item-sort"><a href="?sort=lowest-rating">Lowest rating</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row detail-review-list">
+                        <div class="detail-review-read">
+                            <div class="row detail-review-subject">The best Converse #1</div>
+                            <p class="row">
+                                <span class="detail-review-rating">
+                                    <span class="fa fa-star star-rating-checked"></span>
+                                    <span class="fa fa-star star-rating-checked"></span>
+                                    <span class="fa fa-star star-rating-checked"></span>
+                                    <span class="fa fa-star star-rating-checked"></span>
+                                    <span class="fa fa-star star-rating-checked"></span>
+                                </span>
+                                <span class="detail-review-user-name">abcd1234</span>
+                                <span>-</span>
+                                <span class="detail-review-date">09 August 2019</span>
+                            </p>
+                            <p class="row detail-review-content">Some of the best shoes Converse always with the
+                                best
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias natus non eius culpa.
+                                Placeat, ab quis! Nihil quo nam commodi, officiis officia consectetur cupiditate
+                                repellat temporibus, sint nemo accusantium dicta.</p>
+                        </div>
+                        <div class="detail-review-read">
+                            <div class="row detail-review-subject">The best Converse #1</div>
+                            <p class="row">
+                                <span class="detail-review-rating">
+                                    <span class="fa fa-star star-rating-checked"></span>
+                                    <span class="fa fa-star star-rating-checked"></span>
+                                    <span class="fa fa-star star-rating-checked"></span>
+                                    <span class="fa fa-star star-rating-checked"></span>
+                                    <span class="fa fa-star star-rating-checked"></span>
+                                </span>
+                                <span class="detail-review-user-name">abcd1234</span>
+                                <span>-</span>
+                                <span class="detail-review-date">09 August 2019</span>
+                            </p>
+                            <p class="row detail-review-content">Some of the best shoes Converse always with the
+                                best</p>
+                        </div>
+                        <div class="detail-review-read">
+                            <div class="row detail-review-subject">The best Converse #1</div>
+                            <p class="row">
+                                <span class="detail-review-rating">
+                                    <span class="fa fa-star star-rating-checked"></span>
+                                    <span class="fa fa-star star-rating-checked"></span>
+                                    <span class="fa fa-star star-rating-checked"></span>
+                                    <span class="fa fa-star star-rating-checked"></span>
+                                    <span class="fa fa-star star-rating-checked"></span>
+                                </span>
+                                <span class="detail-review-user-name">abcd1234</span>
+                                <span>-</span>
+                                <span class="detail-review-date">09 August 2019</span>
+                            </p>
+                            <p class="row detail-review-content">Some of the best shoes Converse always with the
+                                best</p>
+                        </div>
+                        <div class="detail-review-read">
+                            <div class="row detail-review-subject">The best Converse #1</div>
+                            <p class="row">
+                                <span class="detail-review-rating">
+                                    <span class="fa fa-star star-rating-checked"></span>
+                                    <span class="fa fa-star star-rating-checked"></span>
+                                    <span class="fa fa-star star-rating-checked"></span>
+                                    <span class="fa fa-star star-rating-checked"></span>
+                                    <span class="fa fa-star star-rating-checked"></span>
+                                </span>
+                                <span class="detail-review-user-name">abcd1234</span>
+                                <span>-</span>
+                                <span class="detail-review-date">09 August 2019</span>
+                            </p>
+                            <p class="row detail-review-content">Some of the best shoes Converse always with the
+                                best</p>
+                        </div>
+                        <div class="detail-review-read">
+                            <div class="row detail-review-subject">The best Converse #1</div>
+                            <p class="row">
+                                <span class="detail-review-rating">
+                                    <span class="fa fa-star star-rating-checked"></span>
+                                    <span class="fa fa-star star-rating-checked"></span>
+                                    <span class="fa fa-star star-rating-checked"></span>
+                                    <span class="fa fa-star star-rating-checked"></span>
+                                    <span class="fa fa-star star-rating-checked"></span>
+                                </span>
+                                <span class="detail-review-user-name">abcd1234</span>
+                                <span>-</span>
+                                <span class="detail-review-date">09 August 2019</span>
+                            </p>
+                            <p class="row detail-review-content">Some of the best shoes Converse always with the
+                                best</p>
+                        </div>
+                        <div class="detail-review-read">
+                            <div class="row detail-review-subject">The best Converse #1</div>
+                            <p class="row">
+                                <span class="detail-review-rating">
+                                    <span class="fa fa-star star-rating-checked"></span>
+                                    <span class="fa fa-star star-rating-checked"></span>
+                                    <span class="fa fa-star star-rating-checked"></span>
+                                    <span class="fa fa-star star-rating-checked"></span>
+                                    <span class="fa fa-star star-rating-checked"></span>
+                                </span>
+                                <span class="detail-review-user-name">abcd1234</span>
+                                <span>-</span>
+                                <span class="detail-review-date">09 August 2019</span>
+                            </p>
+                            <p class="row detail-review-content">Some of the best shoes Converse always with the
+                                best</p>
+                        </div>
+                        <div class="detail-review-read">
+                            <div class="row detail-review-subject">The best Converse #1</div>
+                            <p class="row">
+                                <span class="detail-review-rating">
+                                    <span class="fa fa-star star-rating-checked"></span>
+                                    <span class="fa fa-star star-rating-checked"></span>
+                                    <span class="fa fa-star star-rating-checked"></span>
+                                    <span class="fa fa-star star-rating-checked"></span>
+                                    <span class="fa fa-star star-rating-checked"></span>
+                                </span>
+                                <span class="detail-review-user-name">abcd1234</span>
+                                <span>-</span>
+                                <span class="detail-review-date">09 August 2019</span>
+                            </p>
+                            <p class="row detail-review-content">Some of the best shoes Converse always with the
+                                best</p>
+                        </div>
+                        <div class="row">
+                            <nav class="pagination-bar">
+                                <ul class="pagination">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#"><i class="fas fa-arrow-left"></i></a>
+                                    </li>
+                                    <li class="page-item active">
+                                        <a class="page-link" href="?page=1">
+                                            1
+                                            <span class="sr-only">(current)</span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="?page=2">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="?page=3">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#"><i class="fas fa-arrow-right"></i></a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src='../js/review.js'></script>
+
+</html>
