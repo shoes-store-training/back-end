@@ -1,12 +1,23 @@
+#sidebar {
+    width: 230px;
+    overflow: hidden;
+    float: left;
+    background-color: #3e3f42;
+    height: 720px;
+}
+.main-content a:hover {
+    text-decoration: none;
+}
 .main-content {
     min-height: 500%;
-    width: 100%;
+    width: calc(100% - 230px);
     overflow: hidden;
     position: relative;
     font-family: 'Poppins', sans-serif;
     font-size: 17px;
     background: #edeff7;
     box-sizing: border-box;
+    float: left;
 }
 
 .m-subheader {
@@ -72,16 +83,6 @@
 .btn-default:hover {
     background: #009879;
     color: #ffffff;
-}
-
-.btn-green {
-    background: #009879;
-    color: #ffffff;
-    border: none;
-}
-
-.btn-green:hover {
-    background: #0d8069;
 }
 
 /* main-content  */
@@ -152,13 +153,19 @@
     display: block;
     height: 5vh;
 }
-#name-error {
-    margin-left: 144px;
-}
 #pr-content {
     padding: 15px 50px;
-    max-width: 800px;
+    max-width: 1200px;
     margin: auto;
+    display: flex;
+}
+.half-content {
+    width: 42%;
+    margin: 8px;
+}
+.half-content h3 {
+    margin-left: 12px;
+    margin-bottom: 45px;
 }
 .form-group {
     margin-bottom: 25px;
@@ -174,71 +181,28 @@
     float: left;
     width: 8em;
     font-size: 15px;
-    margin: 6px 12px;
+    margin: 0px 12px;
     font-weight: bold;
 }
 
 .form-group .input-wrap {
     float: left;
-    width: 77%;
-}
-.form-group .name-wrap {
-    float: left;
-    width: 200px;
-}
-.form-group .form-control {
-    border-radius: 3px;
-    width: 90%;
-    height: 20px;
-    border: 1px solid #ddd;
-    color: #303030;
-    padding: 6px 12px;
-    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
-    cursor: text;
-}
-.form-group .row {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-.form-group .input-radio {
-    margin: 5px;
-}
-.col-xs-4 {
-    width: 33.3333%;
-    position: relative;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
-    float: left;
-}
-.col-xs-6 {
-    margin-right: 30px;
-    float: left;
+    width: 45%;
 }
 
-.col-xs-4 label {
-    padding-left: 15px;
+.profile-wrap .account-profile .input-text {
+    margin: 6px 12px;
 }
-.row {
-    overflow: hidden;
-    position: relative;
-}
-.col-xs-4 input[type="radio"] {
-    width: 18px;
-    height: 18px;
-    color: #0F71DD;
-    position: absolute; 
-    left: 0;
-    bottom: 2px;
-}
-.red-star {
-    color: red;
+.profile-wrap .account-profile .input-text span {
+    color: #303030;
+    font-size: 15px;
+    font-weight: default;
 }
 
 .m-avatar {
     position: relative;
     display: inline-block;
+    display: flex;
 }
 
 .m-avatar__holder {
@@ -249,6 +213,7 @@
     background-size: cover;
     border: 3px solid #ffffff;
     box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.1);
+    margin: auto;
 }
 .m-avatar__btn {
     cursor: pointer;

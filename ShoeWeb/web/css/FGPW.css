@@ -1,0 +1,203 @@
+.llogin{
+    margin-top: 12px;
+    background-color: #fff;
+    border: 1px solid #dddfe2;
+    border-radius: 3px;
+}
+
+.llogins{
+    border-top: none;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    padding: 12px;
+    background-color: #f5f6f7
+}
+
+.llitext{
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.lchangepw{
+    border-top: 1px solid #e5e5e5;
+    background-color: #f2f2f2;
+    padding: 12px;
+}
+
+.lchangepwtable{
+    width: 100%;
+    border: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-align: left;
+}
+
+.lchangepwtr{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.lchangepwtd{
+    text-align: left;
+    width: 44px;
+}
+
+.lchangepwimg{
+    width: 20px;
+    height: 20px;
+}
+
+.lchangepwtds{
+    text-align: left;
+}
+
+.lchangepwtds-text{
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.lchangepwtds-texts{
+    color: grey;
+    display: block;
+    font-size: 14px;
+}
+
+.lchangepwtdss{
+    text-align: right;
+}
+
+.lchangepwb-button{
+    margin-left: 12px;
+    line-height: 22px;
+    background-color: #f5f6f7;
+    border-color: #ccd0d5;
+    color: #4b4f56;
+    border: 1px solid;
+    border-radius: 2px;
+    box-sizing: content-box;
+    font-size: 12px;
+    -webkit-font-smoothing: antialiased;
+    font-weight: bold;
+    justify-content: center;
+    padding: 0 8px;
+    position: relative;
+    text-align: center;
+    text-shadow: none;
+    vertical-align: middle;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    white-space: nowrap;
+    margin: 0;
+}
+
+.lchangepwb-button:hover{
+    color: #0F71DD;
+    transition: all 0.4s ease;
+}
+
+.lnewpassword{
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-top: 1px solid #e5e5e5;
+    padding: 12px;
+}
+
+.lnewpassword-tr{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.passwords{
+    border-top: 1px solid #ccc;
+    margin-top: 14px;
+}
+
+.lpassword{
+    margin: auto;
+    width: 75%;
+}
+
+.lpasswords{
+    position: relative;
+    border: none;
+    background-color: #f2f2f2;
+}
+
+.lnewpassword-setting{
+    width: 500px;
+    padding-bottom: 10px;
+}
+
+.lnewpassword-settings{
+    padding-top: 10px;
+}
+
+.lnewpassword-table{
+    table-layout: fixed;
+    border: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+.lnewpassword-change{
+    
+}
+
+.label{
+    padding-top: 8px;
+    color: #666;
+    font-weight: bold;
+    padding-right: 10px;
+    text-align: right;
+    width: 180px;
+    padding: 3px 0 1px 0;
+    text-align: left;
+    vertical-align: top;
+    min-width: 100px;
+    font-size: 17px;
+}
+
+.linput-data{
+    padding-top: 5px;
+    padding: 3px 0 1px 0;
+    text-align: left;
+    vertical-align: top;
+}
+
+.linputtext{
+    padding-bottom: 4px;
+    border: 1px solid #ccd0d5;
+    border-radius: 0;
+    margin: 0;
+    padding: 3px;
+    font-size: 12px;
+    background-color: #fff;
+    color: #1c1e21;
+}
+
+.ldone{
+    margin-top: 10px;
+}
+
+.ldone-button{
+    display: inline-block;
+    line-height: 40px;
+    padding: 0 25px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.4s ease;
+    border-radius: 3px;
+    background: #0F71DD;
+    border: none;
+    color: #fff;
+}
+
+.ldone-button:hover{
+    background: rgb(2, 124, 255);
+    transition: all 0.4s ease;
+    box-shadow: 0 6px 8px 0 rgba(0,0,0,0.24), 0 8px 25px 0 rgba(0,0,0,0.19);
+}

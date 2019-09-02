@@ -60,15 +60,25 @@ public class EditProfileUserServlet extends HttpServlet {
             } else {
             }
             if ("save".equals(saveButton)) {
-                String fullName;
+                String fullName = request.getParameter("full_name");
                 String phoneNumber = request.getParameter("phone_number");
                 String email = request.getParameter("email");
+                String valueOfGender = request.getParameter("gender");
+                out.println(valueOfGender);
                 String gender;
+                if ("off".equals(valueOfGender)) {
+                    gender = "2";
+                } else {
+                    gender = "1";
+                }
+                out.println(gender);
                 String address = request.getParameter("address");
                 HttpSession session = request.getSession();
                 Account acc = (Account) session.getAttribute("account");
+                acc.setFullName(fullName);
                 acc.setPhoneNumber(phoneNumber);
                 acc.setEmail(email);
+                acc.setGender(gender);
                 acc.setAddress(address);
                 acc.setIsSaved(true);
                 AccessAccountBO accessAccountBO = new AccessAccountBO();

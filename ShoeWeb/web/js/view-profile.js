@@ -1,26 +1,15 @@
 /*--- LOADING HEADER ---*/
 /* global fetch, gender, isSaved */
 
-fetch('/util/user-header.html')
+fetch('./util/user-header.html')
         .then(data => data.text())
         .then(html => document.getElementById('header').innerHTML = html);
 
 
-//Set date input field's max date to today
-function maxToday() {
-    var today = new Date();
-    var dd = today.getDate();
-    var mm = today.getMonth() + 1; //January is 0!
-    var yyyy = today.getFullYear();
-    if (dd < 10) {
-        dd = '0' + dd;
-    }
-    if (mm < 10) {
-        mm = '0' + mm;
-    }
-    return today = yyyy + '-' + mm + '-' + dd;
-}
-document.getElementById("birthday-picker").setAttribute("max", maxToday());
+/*--- LOADING SIDEBAR ---*/
+fetch('./util/profile-sidebar.html')
+    .then(data => data.text())
+    .then(html => document.getElementById('pr-menu-left').innerHTML = html);
 
 //Button function
 const form = document.getElementById(".pr-content");
@@ -81,13 +70,12 @@ function displayEditForm() {
 
 //Validate Form
 function validateForm() {
-    var fname = document.getElementById("first_name").value;
-    var lname = document.getElementById("last_name").value;
+    var fullname = document.getElementById("full_name").value;
     var phone = document.getElementById("phone_number").value;
     var email = document.getElementById("email").value;
 
     reason = "";
-    reason += validateName(fname, lname);
+    reason += validateName(fullname);
     reason += validatePhone(phone);
     reason += validateEmail(email);
     if (reason.length === 0) {
@@ -97,30 +85,16 @@ function validateForm() {
     }
 }
 
-function validateName(fname, lname) {
+function validateName(fullname) {
     var error = "";
-    if (fname.length == 0 && lname.length == 0) {
-        invalidAlert("first_name");
-        invalidAlert("last_name");
-        document.getElementById("name-error").innerHTML = "Both First name and Last name have not been filled in!";
-        error = "1";
-        return error;
-    } else if (fname.length != 0 && lname.length == 0) {
-        validAlert("first_name");
-        invalidAlert("last_name");
-        document.getElementById("name-error").innerHTML = "Last name has not been filled in!";
-        error = "1";
-        return error;
-    } else if (fname.length == 0 && lname.length != 0) {
-        invalidAlert("first_name");
-        validAlert("last_name");
-        document.getElementById("name-error").innerHTML = "First name has not been filled in!";
+    if (fullname.length == 0) {
+        invalidAlert("full_name");
+        document.getElementById("name-error").innerHTML = "Full name have not been filled in!";
         error = "1";
         return error;
     }
-    if (fname.length != 0 && lname.length != 0) {
-        validAlert("first_name");
-        validAlert("last_name");
+    if (fullname.length != 0) {
+        validAlert("full_name");
         document.getElementById("name-error").innerHTML = "";
         return "";
     }

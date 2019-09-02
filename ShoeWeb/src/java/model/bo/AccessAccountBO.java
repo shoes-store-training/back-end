@@ -39,12 +39,6 @@ public class AccessAccountBO {
 
     public boolean saveAccount(Account acc) throws ClassNotFoundException, SQLException {
         AccessAccountDAO aad = new AccessAccountDAO();
-        String gender = acc.getGender();
-        if ("Male".equals(gender)) {
-            acc.setGender("1");
-        } else {
-            acc.setGender("2");
-        }
         return aad.saveAccount(acc);
     }
 

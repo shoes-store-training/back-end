@@ -7,13 +7,14 @@
 <%
     Account acc = (Account) session.getAttribute("account");
     boolean isSaved = acc.isIsSaved();
+    String userName = acc.getUserName();
     String fullName = acc.getFullName();
     String phoneNumber = acc.getPhoneNumber();
     String email = acc.getEmail();
     String gender;
-    if (acc.getGender().equals("1")) {
+    if ("1".equals(acc.getGender())) {
         gender = "Male";
-    } else if (acc.getGender().equals("2")) {
+    } else if ("2".equals(acc.getGender())) {
         gender = "Female";
     } else {
         gender = "No gender";
@@ -42,58 +43,19 @@
         <header id="header"></header>
         <div class="profile-wrap">
             <div class="pr-container">
-                <div class="pr-menu-left">
-                    <div class="profiles">
-                        <p class="pr-avatar">
-                            <img src="img/avatar.jpg" style="height: 45px; width: 45px;" alt="avatar" class="avatar">
-                        </p>
-                        <h6 class="username">Name</h6>
-                    </div>
-                    <ul class="pr-sub-menu">
-                        <li class="active">
-                            <a href="#"><i class="fas fa-user"></i>Profile</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fas fa-shopping-cart"></i>Shopping list</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fas fa-store"></i>Track orders</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fas fa-comment-dots"></i>All reviews</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fas fa-tags"></i>Vouchers and Promotions</a>
-                        </li>
-                    </ul>
-                </div>
+                <div id="pr-menu-left"></div>
                 <div class="pr-content-right">
                     <h1 class="pr-title-profile">Profile</h1>
                     <div class="account-profile">
                         <div class="profile-content">
                             <form action="EditProfileUserServlet" method="post" id="pr-content">
                                 <div class="form-group">
-                                    <div class="">
-                                        <div class="row">
-                                            <div class="col-xs-6">
-                                                <label for="first_name" class="control-label">First name<span style="color: red;">*</span></label>
-                                                <div class="name-wrap">
-                                                    <label class="input-text">
-                                                        <span>No First name</span>
-                                                    </label>
-                                                    <input type="text" name="first_name" id="first_name" class="form-control  form-control-hidden half-form-control" value="" placeholder="First name">
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-6">
-                                                <label for="last_name" class="control-label">Last name<span style="color: red;">*</span></label>
-                                                <div class="name-wrap">
-                                                    <label class="input-text">
-                                                        <span>No Last name</span>
-                                                    </label>
-                                                    <input type="text" name="last_name" id="last_name" class="form-control  form-control-hidden half-form-control" value="" placeholder="Last name">
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <label for="full_name" class="control-label">Full name<span style="color: red;">*</span></label>
+                                    <div class="input-wrap">
+                                        <label class="input-text">
+                                            <span><%=fullName%></span>
+                                        </label>
+                                        <input type="text" name="full_name" id="full_name" class="form-control  form-control-hidden half-form-control" value="" placeholder="<%=fullName%>">
                                         <div class="help-block" id="name-error"></div>
                                     </div>
                                 </div>
@@ -103,7 +65,7 @@
                                         <label class="input-text">
                                             <span><%=phoneNumber%></span>
                                         </label>
-                                        <input type="text" name="phone_number" id="phone_number" class="form-control form-control-hidden" value placeholder="<%=phoneNumber%>">
+                                        <input type="text" name="phone_number" id="phone_number" class="form-control form-control-hidden" placeholder="<%=phoneNumber%>">
                                         <div class="help-block" id="phone-error"></div>
                                     </div>
                                 </div>
@@ -140,18 +102,6 @@
                                         <div class="help-block"></div>
                                     </div>
                                 </div>
-                                <div class="form-group ">
-                                    <label class="control-label no-lh" for="birthday">
-                                        Date of birth
-                                    </label>
-                                    <div class="input-wrap">
-                                        <label class="input-text">
-                                            <span>No Date of birth</span>
-                                        </label>
-                                        <input id="birthday-picker" class="birthday-picker form-control-hidden form-control" type='date' min='1899-01-01' max='2019-01-01'></input>
-                                        <span class="help-block"></span>
-                                    </div>
-                                </div>
                                 <div class="form-group">
                                     <label for="address" class="control-label">Address</label>
                                     <div class="input-wrap">
@@ -168,7 +118,7 @@
                                 <div class="btn-center">
                                     <button id="edit-btn" class="btn btn-edit" type="button" onclick="displayEditForm()">Edit profile</button>
                                     <button id="save-btn" name="save-btn" value="save" class="btn btn-save" type="submit" onclick="hideEditForm()">Save</button>
-                                     <button id="cancel-btn" name="cancel-btn" value="cancel" class="btn btn-cancel" type="submit" onclick="hideEditForm()">Cancel</button>
+                                    <button id="cancel-btn" name="cancel-btn" value="cancel" class="btn btn-cancel" type="submit" onclick="hideEditForm()">Cancel</button>
                                     <button id="reset-btn" class="btn btn-reset" type="reset" onclick="resetForm()">Reset</button>
                                 </div>
                             </form>
@@ -191,14 +141,13 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
-    </body>
-    <script src='js/view-profile.js'></script>
+    </div>
+</body>
+<script src='js/view-profile.js'></script>
 </html>
 

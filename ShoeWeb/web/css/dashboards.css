@@ -1,15 +1,28 @@
+#sidebar {
+    width: 230px;
+    overflow: hidden;
+    float: left;
+    background-color: #3e3f42;
+    min-height: 1144px;
+}
+.container-fruid {
+    float: left;
+    width: calc(100% - 230px);
+}
 .font-poppins {
     font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
-  }
+}
 
 body{
-  font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
-  font-weight: 400;
-  font-size: 14px;}
+    font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
 
 .bg-gra-02 {
     background: linear-gradient(to top right, #ffffff 0%, rgba(0, 0, 0, 0.055) 100%);
-  }
+}
+
 .option-bar{
     display: block;
     height: 60px;

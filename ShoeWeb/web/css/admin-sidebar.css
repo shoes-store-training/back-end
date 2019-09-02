@@ -1,0 +1,111 @@
+
+.lsidenav {
+  width: 230px;
+  background-color: #3e3f42;
+  margin: 0;
+  float: left;
+}
+.lsidenav a:hover {
+  text-decoration: none;
+}
+.ldropdown-btn{
+  width: 100%;
+  padding: 10px 12px 10px 20px;
+}
+
+.lpadding-left{
+  padding: 10px 12px 10px 30px;
+}
+
+.lpadding-left2{
+  padding: 10px 12px 10px 40px;
+}
+
+.lsidenav a, .ldropdown-btn {
+  text-decoration: none;
+  font-size: 15px;
+  color: #dcdee6;
+  display: block;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+.lsidenav a:hover, .ldropdown-btn:hover, .lpadding-left:hover {
+  color: #f1f1f1;
+  background: #7895eb;
+}
+
+.ladmin-ava{
+  height: 110px;
+  text-align: center;
+}
+
+.ltext-status{
+  color: aliceblue;
+}
+
+.lavatar{
+  margin-top:15px;
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+
+}
+
+.ladmin-status{
+  height: 150px;
+  width: 100%;
+  margin: 0;
+}
+
+.lsearch{
+  background-color: #262626;
+  height: 40px;
+  width: 100%;
+}
+
+.lsearch-btn{
+  padding: 10px 10px 10px 10px;
+  color: #f1f1f1;
+  float: right;
+  border-radius: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.lsearch-txt{
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  margin-left: 5px;
+  color: white;
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 40px;
+  width: 150px;
+}
+
+.main {
+  background-color: #edeff7;
+  width: 100%;
+}
+
+.ldropdown-container {
+  display: none;
+  background-color: #262626;
+}
+
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+@media screen and (max-height: 450px) {
+  .lsidenav {padding-top: 15px;}
+  .lsidenav a {font-size: 18px;}
+}

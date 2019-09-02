@@ -3,9 +3,11 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
+.profile-wrap .btn-center a {
+    text-decoration: none;
+}
 .profile-wrap {
     min-height: 500%;
-    width: 100%;
     overflow: hidden;
     position: relative;
     font-family: 'Poppins', sans-serif;
@@ -21,134 +23,6 @@ body {
     padding-right: 15px;
     padding-top: 5px;
 }
-/* ===========MENU LEFT=========== */
-.profile-wrap .pr-menu-left {
-    min-width: 200px;
-    padding-right: 0;
-    padding-left: 0;
-    float: left;
-    margin-right: 10px;
-    padding-bottom: 20px;
-}
-.profile-wrap .profiles {
-    background: 0 0;
-    color: #fff;
-    padding: 10px 5px 5px;
-    background: #e6e6e6;
-}
-.profile-wrap p {
-    margin-top: 0;
-}
-.pr-avatar{
-	position: relative;
-	height: 45px;
-	width: 45px;
-	border-radius: 50%;
-	overflow: hidden;
-	box-shadow: 1px 1px 15px -5px black;
-    transition: all .3s ease;
-    margin-right: 10px;
-    margin-bottom: 0;
-    float: left;
-}
-.pr-avatar:hover{
-    transform: scale(1.05);
-    cursor: pointer;
-}
-.pr-avatar:hover .avatar{
-    opacity: 0.5;
-}
-.avatar {
-    height: 100%;
-    width: 100%;
-    transition: all .3s ease;
-}
-
-.profile-wrap .pr-name {
-    font-size: 15px;
-    margin-bottom: 5px;
-    color: #303030;
-    margin-top: 5px;
-    font-weight: 300;
-    float: left;
-} 
-.upload-button {
-    position: absolute;
-    top: 0; 
-    left: 0;
-}
-.upload-button .fa-arrow-circle-up{
-    position: absolute;
-    font-size: 46px;
-    top: 25px;
-    left: 172px;
-    text-align: center;
-    opacity: 0;
-    transition: all .3s ease;
-    color: #ddd;
-}
-.upload-button:hover .fa-arrow-circle-up{
-    opacity: .9;
-}
-.file-upload {display: none;}
-.profile-wrap h6 {
-    margin: 0;
-    font-size: 17px;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    color: #303030;
-    padding: 5px 0;
-    border-radius: 5%; 
-    float: left;
-}
-.profile-wrap .pr-sub-menu {
-    list-style: none;
-    display: block;
-    border: none;
-    width: 100%;
-    position: relative;
-    margin: 45px 0 0 0;
-    z-index: 1;
-    min-width: 160px;
-    padding: 5px 0;
-}
-
-.profile-wrap .pr-sub-menu li a{
-    white-space: nowrap;
-    font-size: 15px;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    text-align: left;
-    color: #303030;
-    padding: 15px 20px 15px 60px;
-    position: relative;
-    display: block;
-    text-decoration: none;
-}
-
-.profile-wrap .pr-sub-menu li a i {
-    font-size: 18px;
-    height: 30px;
-    text-align: center;
-    width: 40px;
-    position: absolute;
-    top: 0;
-    left: 7px;
-    bottom: 0;
-    margin: auto;
-    line-height: 30px;
-    color: #303030;
-}
-.profile-wrap .pr-sub-menu .active a {
-    background: #c9c9c9;
-}
-
-.profile-wrap .pr-sub-menu a:hover {
-    background: #ddd;
-}
-
 /* ================CONTENT-RIGHT =================*/
 .profile-wrap .pr-content-right {
     width: 900px;
@@ -204,15 +78,10 @@ body {
     float: left;
     width: 60%;
 }
-.profile-wrap .form-group .name-wrap {
-    float: left;
-    width: 200px;
-}
 .profile-wrap .account-profile .input-text {
     margin: 6px 12px;
     /* display: none; */
 }
-.name-wrap span {padding-left: 75px;}
 .profile-wrap .account-profile .input-text span {
     color: #303030;
     font-size: 15px;
@@ -228,16 +97,8 @@ body {
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
     cursor: text;
 }
-.profile-wrap .form-group .half-form-control {
-    margin-left: 12px;
-}
 .profile-wrap .form-control-hidden {
     display: none;
-}
-.profile-wrap .form-group .row {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
 }
 .profile-wrap .form-group .input-radio {
     margin: 5px;
@@ -250,17 +111,9 @@ body {
     padding-right: 15px;
     float: left;
 }
-.profile-wrap .col-xs-6 {
-    margin-right: 30px;
-    float: left;
-}
 
 .profile-wrap .col-xs-4 label {
     padding-left: 15px;
-}
-.profile-wrap .row {
-    overflow: hidden;
-    position: relative;
 }
 .profile-wrap .col-xs-4 input[type="radio"] {
     width: 18px;
@@ -304,10 +157,10 @@ body {
     transition: all 0.4s ease;
     box-shadow: 0 6px 8px 0 rgba(0,0,0,0.24), 0 8px 25px 0 rgba(0,0,0,0.19);
 }
-.btn-save, .btn-edit {
+.btn-save, .btn-changepw {
     background: #0F71DD;
 }
-.btn-cancel, .btn-reset {
+.btn-cancel, .btn-reset, .btn-edit {
     background: #ff0033;
 }
 
@@ -315,10 +168,10 @@ body {
     display: none;
 }
 /* .btn-edit {display: none;} */
-.btn:hover, .btn-edit:hover {
+.btn:hover {
     background: #ff0033;
 }
-.btn-cancel:hover, .btn-reset:hover {
+.btn-cancel:hover, .btn-reset:hover, .btn-edit:hover {
     background: #0F71DD;
 }
 .btn-center {
@@ -341,9 +194,6 @@ body {
     text-align: center;
     margin: 10%;
     padding: 3%;
-}
-#set-ava {
-    display: none;
 }
 #uploadAvatar .imageBox {
     position: relative;
@@ -385,6 +235,7 @@ body {
 
 #uploadAvatar #primary {
     margin-top: 15px;
+    display: none;
 }
 
 #uploadAvatar #primary .setAvatar, #uploadAvatar #primary .removeAvatar {

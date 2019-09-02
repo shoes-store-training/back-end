@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.profile-wrap {
+    min-height: 500%;
+    overflow: hidden;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    background: #e6e6e6;
+}
+
+.profile-wrap .pr-container {
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+}
+/* ================CONTENT-RIGHT =================*/
+.profile-wrap .pr-content-right {
+    width: 900px;
+    float: left;
+    margin-left: 5px;
+    position: relative;
+}
+
+.profile-wrap h1 {
+    margin: 20px 0 15px 0;
+    font-size: 20px;
+    font-weight: 400;
+    color: #303030;
+}
+
+.profile-wrap .account-profile {
+    display: block;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 30px 30px 20px;
+    background: #fff;
+    border-radius: 4px; 
+}
+
+.profile-wrap .account-profile .form-group {
+    margin-bottom: 25px;
+    position: relative;
+    overflow: hidden;
+}
+.profile-wrap .form-group label {
+    width: 100%;
+    cursor: text;
+}
+
+.profile-wrap .form-group .control-label {
+    float: left;
+    width: 12em;
+    font-size: 15px;
+    margin: 6px 12px;
+    font-weight: bold;
+}
+
+.profile-wrap .form-group .input-wrap {
+    float: left;
+    width: 60%;
+}
+.profile-wrap .form-group .form-control {
+    border-radius: 3px;
+    width: 90%;
+    height: 20px;
+    border: 1px solid #ddd;
+    color: #303030;
+    padding: 6px 12px;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    cursor: text;
+}
+.help-block {
+    color: #ff0033;
+    font-size: 13px;
+    line-height: 20px;
+    display: block;
+    height: 5vh;
+}
+
+.btn {
+    display: inline-block;
+    line-height: 40px;
+    padding: 0 25px;
+    margin: 15px 26px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.4s ease;
+    border-radius: 3px;
+    border: none;
+    color: #fff;
+}
+.btn:hover {
+    transition: all 0.4s ease;
+    box-shadow: 0 6px 8px 0 rgba(0,0,0,0.24), 0 8px 25px 0 rgba(0,0,0,0.19);
+}
+.btn-save {
+    background: #0F71DD;
+}
+.btn-cancel, .btn-reset {
+    background: #ff0033;
+}
+
+.btn:hover {
+    background: #ff0033;
+}
+.btn-cancel:hover, .btn-reset:hover {
+    background: #0F71DD;
+}
+.btn-center {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
