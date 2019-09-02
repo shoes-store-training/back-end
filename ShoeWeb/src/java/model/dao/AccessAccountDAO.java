@@ -21,7 +21,7 @@ import model.db.DatabaseConnection;
  * @author longpd
  */
 public class AccessAccountDAO {
-
+    
     private String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
     private String url = "jdbc:sqlserver://localhost:1433;databaseName=snkrkorea";
     private Statement stm = null;
@@ -29,9 +29,8 @@ public class AccessAccountDAO {
     private Account acc;
 
     public Account getAccount(String username, String pass) throws SQLException, ClassNotFoundException {
-        Account acc = null;
-        try {
-            conn = DatabaseConnection.getDbConnection();
+        try{
+            conn =  DatabaseConnection.getDbConnection();
             try (PreparedStatement pstm = conn.prepareStatement("SELECT * FROM tbl_user WHERE userId = ? and password = ?")) {
                 ResultSet rs;
                 pstm.setString(1, username);
@@ -57,7 +56,7 @@ public class AccessAccountDAO {
     }
     public boolean saveAccount(Account acc) throws ClassNotFoundException{
         try {
-            conn = DatabaseConnection.getDbConnection();
+            conn =  DatabaseConnection.getDbConnection();
             PreparedStatement pstm = conn.prepareStatement("UPDATE tbl_user SET email = ?, fullname = ?, address = ?, gender = ?, phone = ? WHERE userId = ? and password = ?");
             pstm.setString(1, acc.getEmail());
             pstm.setString(2, acc.getFullName());
@@ -72,5 +71,28 @@ public class AccessAccountDAO {
             e.printStackTrace();
         }
         return false;
+    }
+    public boolean changePassWord(Account acc) throws ClassNotFoundException{
+        try{
+            conn = DatabaseConnection.getDbConnection();
+            PreparedStatement pstm = conn.prepareStatement("UPDATE tbl_user SET password = ? WHERE userId = ?");
+            pstm.setString(1, acc.getPassword());
+            pstm.setString(2, acc.getUserName());
+            pstm.executeUpdate();
+            System.out.println(acc.getUserName());
+            return true;
+        }
+        catch(SQLException e){
+            e.printStackTrace();
+        }
+        return false;
+    }
+    
+    public static void main(String[] args) throws ClassNotFoundException, SQLException {
+        AccessAccountDAO aad = new AccessAccountDAO();
+        Account acc =  aad.getAccount("admin", "123");
+        acc.setPassword("123456");
+        aad.changePassWord(acc);
+        System.out.println(acc.getPassword());
     }
 }

@@ -1,10 +1,12 @@
 /*--- LOADING HEADER ---*/
-fetch('/util/user-header.html')
+/* global oldPassWord */
+
+fetch('./util/user-header.html')
     .then(data => data.text())
     .then(html => document.getElementById('header').innerHTML = html);
 
 /*--- LOADING SIDEBAR ---*/
-fetch('/util/profile-sidebar.html')
+fetch('./util/profile-sidebar.html')
     .then(data => data.text())
     .then(html => document.getElementById('pr-menu-left').innerHTML = html);
 
@@ -30,13 +32,11 @@ function resetForm() {
 saveBtn.onclick = function() {
     if (validateForm()) {
         alert("Change password successfully!");
-        resetForm();
-        return backToViewPage();
     }
 }
 
 function backToViewPage() {
-    window.location='/view-profile.html';
+    window.location='view-edit-profile-user.jsp';
 }
 
 //Validate Form
@@ -62,6 +62,12 @@ function validateCurrentPw(currentpw) {
     if (currentpw.length == 0) {
         invalidAlert("current_pw");
         document.getElementById("currentPw-error").innerHTML = "This field has not been filled in!";       
+        error = "1";
+        return error;
+    }
+    else if(oldPassWord !== currentpw){
+        invalidAlert("current_pw");
+        document.getElementById("currentPw-error").innerHTML = "Wrong password";       
         error = "1";
         return error;
     }
@@ -120,5 +126,4 @@ function invalidAlert(idName) {
 function validAlert(idName) {
     document.getElementById(idName).style.border = "1px solid green";
 }
-
 

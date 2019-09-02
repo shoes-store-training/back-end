@@ -15,10 +15,10 @@ import model.dao.AccessAccountDAO;
  */
 public class AccessAccountBO {
 
-    private AccessAccountDAO accessAccountDAO;
+    private AccessAccountDAO aad = new AccessAccountDAO();
 
     public Account getAccount(String username, String pass) throws SQLException, ClassNotFoundException {
-        Account account = accessAccountDAO.getAccount(username, pass);
+        Account account = aad.getAccount(username, pass);
         if (account.getFullName() == null || account.getFullName().length() == 0) {
             account.setFullName("No fullname");
         }
@@ -37,13 +37,11 @@ public class AccessAccountBO {
         return account;
     }
 
-    public boolean saveAccount(Account acc) throws ClassNotFoundException, SQLException {
-        AccessAccountDAO aad = new AccessAccountDAO();
+    public boolean saveAccount(Account acc) throws ClassNotFoundException{
         return aad.saveAccount(acc);
     }
-
-    public AccessAccountBO() throws SQLException {
-        accessAccountDAO = new AccessAccountDAO();
-
+    
+    public boolean changePassWord(Account acc) throws ClassNotFoundException{
+        return aad.changePassWord(acc);
     }
 }

@@ -111,11 +111,9 @@
                                         <input type="text" name="address" id="address" class="form-control form-control-hidden" value placeholder="<%=address%>">
                                         <span class="help-block"></span>
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <a class="change-pw" href="#">Change password</a>
-                                </div>
+                                </div>   
                                 <div class="btn-center">
+                                    <a href="change-password.jsp" id="changepw-btn" class="btn btn-changepw" type="button" onclick="">Change password</a>
                                     <button id="edit-btn" class="btn btn-edit" type="button" onclick="displayEditForm()">Edit profile</button>
                                     <button id="save-btn" name="save-btn" value="save" class="btn btn-save" type="submit" onclick="hideEditForm()">Save</button>
                                     <button id="cancel-btn" name="cancel-btn" value="cancel" class="btn btn-cancel" type="submit" onclick="hideEditForm()">Cancel</button>
