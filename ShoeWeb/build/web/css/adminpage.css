@@ -1,0 +1,341 @@
+body {
+  margin: 0;
+}
+
+html{
+  font-family: 'Poppins', sans-serif;
+  overflow-y: scroll;
+}
+
+.lnumber{
+  position: absolute;
+  top: -3px;
+  right: 0%;
+  font-size: 13px;
+  color: white;
+  border: 1px solid red;
+  border-radius: 50%;
+  background-color: red;
+}
+
+.lcontainer{
+  display: grid;
+  grid-template-columns: 230px auto;
+  height: 1000px;
+}
+
+.lactive {
+  background-color: green;
+  color: white;
+}
+
+.lsidenav {
+  height: 1000px;
+  width: 230px;
+  background-color: #3e3f42;
+  margin: 0;
+}
+
+.lpadding-left{
+  padding: 10px 12px 10px 30px;
+}
+
+.lpadding-left2{
+  padding: 10px 12px 10px 40px;
+}
+
+.lsidenav a, .ldropdown-btn {
+  text-decoration: none;
+  font-size: 15px;
+  color: #dcdee6;
+  display: block;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+.lsidenav a:hover, .ldropdown-btn:hover, .lpadding-left:hover, .ldropdowns-btn:hover{
+  color: #f1f1f1;
+  background: #7895eb;
+}
+
+.ladmin-ava{
+  height: 110px;
+  text-align: center;
+}
+
+.ltext-status{
+  color: aliceblue;
+}
+
+.lavatar{
+  margin-top:15px;
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+
+}
+
+.ladmin-status{
+  height: 150px;
+  width: 100%;
+  margin: 0;
+}
+
+.lsearch{
+  background-color: #262626;
+  height: 40px;
+  width: 100%;
+}
+
+.lsearch-btn{
+  padding: 10px 10px 10px 10px;
+  color: #f1f1f1;
+  float: right;
+  border-radius: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.lsearch-txt{
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  margin-left: 5px;
+  color: white;
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 40px;
+  width: 150px;
+}
+
+.main {
+  background-color: #edeff7;
+  width: 100%;
+  height: 1000px;
+}
+
+.ldropdown-container {
+  display: none;
+  background-color: #262626;
+}
+
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+.lcategory-colum{
+  display: grid;
+  grid-template-columns: 14% 14% 14% 14% 14% 14% 14%;
+  height: 50px;
+  text-align: center;
+}
+
+.lcategory{
+  border: 1px solid black;
+}
+
+.ldropdown-btn{
+  width: 100%;
+  padding: 10px 12px 10px 20px;
+}
+
+.ldropdowns-btn{
+  width: 50%;
+  padding: 10px 12px 10px 20px;
+  background-color: #262626;
+  color: white;
+  border: none;
+}
+
+.header-table{
+  width: 95%;
+  border-collapse: collapse;
+  margin: 25px 0 0 25px;
+  font-size: 0.9em;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.header-table thead tr{
+  background-color: #009879;
+  color: white; 
+  text-align: left;
+  font-weight: bold;
+}
+
+.header-table th,
+.header-table td{
+  padding: 12px 15px;
+}
+
+.header-table tbody tr {
+  border-bottom: 1px solid white;
+}
+
+.header-table tbody tr:nth-of-type(even){
+    background-color: #f3f3f3;
+}
+
+.header-table tbody tr:nth-of-type(odd){
+  background-color: white;
+}
+
+.header-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.header-table tbody tr.active-row{
+  font-weight: bold;
+  color: #009879;
+}
+
+.category-list{
+  margin-left: 25px;
+  font-size: 50px;
+  color: #009879;
+  text-align: left;
+}
+
+td.loverf{
+  overflow: hidden; 
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 0;
+}
+
+td.loverf:hover{
+  overflow: visible;
+  z-index: 1; 
+  position: relative;
+  display: inline;
+  background-color:	#87CEEB;
+  color: black;
+}
+
+td:hover{
+  background-color:	#87CEEB;
+}
+
+table {
+  table-layout: fixed;
+  width: 100px;
+}
+
+.lsearchs{
+  background-color: #262626;
+  height: 30px;
+  width: 200px;
+  float: left;
+  margin: 0 0 20px 30px;
+}
+
+.lsearchs-btn{
+  cursor: pointer;
+  position: absolute;
+  padding-left: 10px;
+  padding-top: 4px;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: transparent;
+  color: #f3f3f3;
+}
+
+.lsearchs-txt{
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  margin-left: 5px;
+  color: white;
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 30px;
+  width: 160px;
+}
+
+.lbtn{
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #3e3f42;
+  cursor: pointer;
+  color: white;
+}
+
+.lbutton{
+  margin-top: 20px;
+  margin-left: 30px;
+}
+
+/* Style the active class (and buttons on mouse-over) */
+.lactives{
+  background-color: #009879;
+}
+
+
+@media screen and (max-height: 450px) {
+  .lsidenav {padding-top: 15px;}
+  .lsidenav a {font-size: 18px;}
+}
+
+@media screen and (max-width: 900px) {
+  .lsidenav{
+    width:200px;
+  }
+  .lcontainer{
+    grid-template-columns: auto auto;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .lsidenav{
+    width:150px;
+  }
+
+  .ltext-status{
+  overflow: hidden; 
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  }
+
+  .ltext-status:hover{
+  overflow: visible;
+  z-index: 1; 
+  position: relative;
+  display: inline;
+  background-color:	#87CEEB;
+  color: black;
+  }
+
+  .lsearch-txt{
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    margin-left: 5px;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 100px;
+  }
+
+  .header-table{
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .lsidenav{
+    display: none;
+  }
+}

@@ -55,7 +55,7 @@
                                         <label class="input-text">
                                             <span><%=fullName%></span>
                                         </label>
-                                        <input type="text" name="full_name" id="full_name" class="form-control  form-control-hidden half-form-control" value="" placeholder="<%=fullName%>">
+                                        <input type="text" name="full_name" id="full_name" class="form-control  form-control-hidden" value="" placeholder="<%=fullName%>">
                                         <div class="help-block" id="name-error"></div>
                                     </div>
                                 </div>
@@ -111,18 +111,18 @@
                                         <input type="text" name="address" id="address" class="form-control form-control-hidden" value placeholder="<%=address%>">
                                         <span class="help-block"></span>
                                     </div>
-                                </div>   
+                                </div>
                                 <div class="btn-center">
                                     <a href="change-password.jsp" id="changepw-btn" class="btn btn-changepw" type="button" onclick="">Change password</a>
                                     <button id="edit-btn" class="btn btn-edit" type="button" onclick="displayEditForm()">Edit profile</button>
-                                    <button id="save-btn" name="save-btn" value="save" class="btn btn-save" type="submit" onclick="hideEditForm()">Save</button>
-                                    <button id="cancel-btn" name="cancel-btn" value="cancel" class="btn btn-cancel" type="submit" onclick="hideEditForm()">Cancel</button>
+                                    <button id="cancel-btn" class="btn btn-cancel" type="submit" value="cancel" name="cancel-btn" onclick="hideEditForm()">Cancel</button>
+                                    <button id="save-btn" class="btn btn-save" type="submit" value="save" name="save-btn" onclick="hideEditForm()">Save</button>
                                     <button id="reset-btn" class="btn btn-reset" type="reset" onclick="resetForm()">Reset</button>
                                 </div>
                             </form>
                             <div id="change-ava">
                                 <div id="set-ava">
-                                    <h3>Change avatar</h3>
+                                    <h3>Avatar</h3>
                                     <div class="img-center">
                                         <div id="uploadAvatar">
                                             <div class="imageBox">
@@ -144,8 +144,6 @@
                 </div>
             </div>
         </div>
-    </div>
-</body>
-<script src='js/view-profile.js'></script>
+    </body>
+    <script src='js/view-profile.js'></script>
 </html>
-

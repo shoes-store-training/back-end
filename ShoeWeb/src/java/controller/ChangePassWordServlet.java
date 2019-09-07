@@ -46,18 +46,22 @@ public class ChangePassWordServlet extends HttpServlet {
             out.println("<title>Servlet ChangePassWordServlet</title>");
             out.println("</head>");
             out.println("<body>");
-            String newPassWord = request.getParameter("newpw");
-            HttpSession session = request.getSession();
-            Account acc = (Account) session.getAttribute("account");
-            acc.setPassword(newPassWord);
-            out.println(acc.getPassword());
-            AccessAccountBO accessAccountBO = new AccessAccountBO();
-            accessAccountBO.changePassWord(acc);
-            session.setAttribute("account", acc);
-            String url = "/view-edit-profile-user.jsp";
-            getServletContext()
-                    .getRequestDispatcher(url)
-                    .forward(request, response);
+            String saveButton = request.getParameter("save-btn");
+            if ("save".equals(saveButton)){
+                String newPassWord = request.getParameter("newpw");
+                HttpSession session = request.getSession();
+                Account acc = (Account) session.getAttribute("account");
+                acc.setPassword(newPassWord);
+                acc.setIsSaved(false);
+                out.println(acc.getPassword());
+                AccessAccountBO accessAccountBO = new AccessAccountBO();
+                accessAccountBO.changePassWord(acc);
+                session.setAttribute("account", acc);
+                String url = "/view-edit-profile-user.jsp";
+                getServletContext()
+                        .getRequestDispatcher(url)
+                        .forward(request, response);
+            }
             out.println("</body>");
             out.println("</html>");
         }

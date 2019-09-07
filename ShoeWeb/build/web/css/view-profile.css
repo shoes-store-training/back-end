@@ -1,0 +1,273 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.profile-wrap .btn-center a {
+    text-decoration: none;
+}
+.profile-wrap {
+    min-height: 500%;
+    overflow: hidden;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    background: #e6e6e6;
+}
+
+.profile-wrap .pr-container {
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+}
+/* ================CONTENT-RIGHT =================*/
+.profile-wrap .pr-content-right {
+    width: 900px;
+    float: left;
+    margin-left: 5px;
+    position: relative;
+}
+
+.profile-wrap h1 {
+    margin: 20px 0 15px 0;
+    font-size: 20px;
+    font-weight: 400;
+    color: #303030;
+}
+
+.profile-wrap .account-profile {
+    display: block;
+    margin-bottom: 20px;
+    width: 100%!important;
+    padding: 30px 30px 20px!important;
+    background: #fff;
+    border-radius: 4px; 
+}
+
+.profile-wrap .account-profile .profile-content {
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+.profile-wrap .account-profile fieldset {
+    border: none;
+}
+
+.profile-wrap .account-profile .form-group {
+    margin-bottom: 25px;
+    position: relative;
+    overflow: hidden;
+}
+.profile-wrap .form-group label {
+    width: 100%;
+    cursor: text;
+}
+
+.profile-wrap .form-group .control-label {
+    float: left;
+    width: 8em;
+    font-size: 15px;
+    margin: 6px 12px;
+    font-weight: bold;
+}
+
+.profile-wrap .form-group .input-wrap {
+    float: left;
+    width: 60%;
+}
+.profile-wrap .account-profile .input-text {
+    margin: 6px 12px;
+    /* display: none; */
+}
+.profile-wrap .account-profile .input-text span {
+    color: #303030;
+    font-size: 15px;
+    font-weight: default;
+}
+.profile-wrap .form-group .form-control {
+    border-radius: 3px;
+    width: 90%;
+    height: 20px;
+    border: 1px solid #ddd;
+    color: #303030;
+    padding: 6px 12px;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    cursor: text;
+}
+.profile-wrap .form-control-hidden {
+    display: none;
+}
+.profile-wrap .form-group .input-radio {
+    margin: 5px;
+}
+.profile-wrap .col-xs-4 {
+    width: 33.3333%;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    float: left;
+}
+
+.profile-wrap .col-xs-4 label {
+    padding-left: 15px;
+}
+.profile-wrap .col-xs-4 input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    color: #0F71DD;
+    position: absolute; 
+    left: 0;
+    bottom: 2px;
+}
+
+.profile-wrap .form-group .change-pw {
+    margin-left: 20%;
+    width: 405px;
+    color: #737373;
+    font-size: 13px;
+}
+.profile-wrap .form-group .change-pw:hover {
+    color: #0F71DD;
+}
+.help-block {
+    color: #ff0033;
+    font-size: 13px;
+    line-height: 20px;
+    display: block;
+    height: 5vh;
+}
+
+.btn {
+    display: inline-block;
+    line-height: 40px;
+    padding: 0 25px;
+    margin: 15px 26px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.4s ease;
+    border-radius: 3px;
+    border: none;
+    color: #fff;
+}
+.btn:hover {
+    transition: all 0.4s ease;
+    box-shadow: 0 6px 8px 0 rgba(0,0,0,0.24), 0 8px 25px 0 rgba(0,0,0,0.19);
+}
+.btn-save, .btn-changepw {
+    background: #0F71DD;
+}
+.btn-cancel, .btn-reset, .btn-edit {
+    background: #ff0033;
+}
+
+.btn-save, .btn-cancel, .btn-reset{
+    display: none;
+}
+/* .btn-edit {display: none;} */
+.btn:hover {
+    background: #ff0033;
+}
+.btn-cancel:hover, .btn-reset:hover, .btn-edit:hover {
+    background: #0F71DD;
+}
+.btn-center {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.profile-wrap .red-star {
+    color: red;
+}
+
+/* CHANGE AVATAR */
+.profile-wrap .pr-content-right h3 {
+    font-size: 18px;
+    color: #303030;
+}
+
+.profile-wrap .pr-content-right .img-center {
+    text-align: center;
+    margin: 10%;
+    padding: 3%;
+}
+#uploadAvatar .imageBox {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    border: 2px solid #303030;
+    background: #fff;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    margin: auto;
+}
+#uploadAvatar #thumbBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    margin-top: -100px;
+    margin-left: -100px;
+    box-shadow: 0 0 0 1000px rgba(255,255,255,.5);
+    background: none repeat scroll 0% 0% transparent;
+    cursor: pointer;
+}
+#uploadAvatar #thumbBox:hover {
+    opacity: 0.5;
+}
+
+#uploadAvatar .spinner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    line-height: 180px;
+    background: rgba(0,0,0,.1);
+    display: none;
+}
+
+#uploadAvatar #primary {
+    margin-top: 15px;
+    display: none;
+}
+
+#uploadAvatar #primary .setAvatar, #uploadAvatar #primary .removeAvatar {
+    cursor: pointer;
+    font-size: 17px;
+    margin: 5px auto 0;
+    text-align: center;
+}
+
+#uploadAvatar #primary .setAvatar {
+    position: relative;
+    width: auto;
+    margin: 0 50px;
+    padding: 5px;
+    border: 2px solid #0F71DD;
+    color: #0F71DD;
+    cursor: pointer;
+}
+#uploadAvatar #primary .setAvatar:hover {
+    background: #0F71DD;
+    color: #fff;
+    transition: 0.4s;
+}
+
+#uploadAvatar #primary .chooseFile {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 162px;
+    height: 30px;
+}

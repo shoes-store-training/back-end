@@ -2,9 +2,8 @@
 /* global fetch, gender, isSaved */
 
 fetch('./util/user-header.html')
-        .then(data => data.text())
-        .then(html => document.getElementById('header').innerHTML = html);
-
+    .then(data => data.text())
+    .then(html => document.getElementById('header').innerHTML = html);
 
 /*--- LOADING SIDEBAR ---*/
 fetch('./util/profile-sidebar.html')
@@ -13,7 +12,7 @@ fetch('./util/profile-sidebar.html')
 
 //Button function
 const form = document.getElementById(".pr-content");
-
+const changePwBtn = document.getElementById('changepw-btn');
 const editBtn = document.getElementById('edit-btn');
 const cancelBtn = document.getElementById('cancel-btn');
 const saveBtn = document.getElementById('save-btn');
@@ -21,7 +20,7 @@ const resetBtn = document.getElementById('reset-btn');
 const inputText = document.getElementsByClassName('input-text');
 const formControlHidden = document.getElementsByClassName('form-control-hidden');
 const helpBlock = document.getElementsByClassName("help-block");
-const setAva = document.getElementById("set-ava");
+const setAva = document.getElementById("primary");
 const formControl = document.getElementsByTagName("input");
 function resetForm() {
     for (var i = 0; i < 6; i++) {
@@ -37,14 +36,15 @@ saveBtn.onclick = function () {
     if (validateForm() === false) {
         return validateForm();
     }
-};
+}
 
 function hideEditForm() {
-    editBtn.style.display = 'inline';
-    cancelBtn.style.display = 'none';
-    saveBtn.style.display = 'none';
-    resetBtn.style.display = 'none';
-    setAva.style.display = 'none';
+    changePwBtn.style.display='inline';
+    editBtn.style.display='inline';
+    cancelBtn.style.display='none';
+    saveBtn.style.display='none';
+    resetBtn.style.display='none';
+    setAva.style.display='none';
     for (var i = 0; i < inputText.length; i++) {
         inputText[i].style.display = 'block';
         formControlHidden[i].style.display = 'none';
@@ -55,11 +55,12 @@ function hideEditForm() {
 }
 
 function displayEditForm() {
-    editBtn.style.display = 'none';
-    cancelBtn.style.display = 'inline';
-    saveBtn.style.display = 'inline';
-    resetBtn.style.display = 'inline';
-    setAva.style.display = 'block';
+    changePwBtn.style.display='none';
+    editBtn.style.display='none';
+    cancelBtn.style.display='inline';
+    saveBtn.style.display='inline';
+    resetBtn.style.display='inline';
+    setAva.style.display='block';    
     for (var i = 0; i < inputText.length; i++) {
         inputText[i].style.display = 'none';
         formControlHidden[i].style.display = 'flex';
@@ -70,12 +71,12 @@ function displayEditForm() {
 
 //Validate Form
 function validateForm() {
-    var fullname = document.getElementById("full_name").value;
+    var name = document.getElementById("full_name").value;
     var phone = document.getElementById("phone_number").value;
     var email = document.getElementById("email").value;
 
     reason = "";
-    reason += validateName(fullname);
+    reason += validateName(name);
     reason += validatePhone(phone);
     reason += validateEmail(email);
     if (reason.length === 0) {
@@ -85,27 +86,26 @@ function validateForm() {
     }
 }
 
-function validateName(fullname) {
+function validateName(name) {
     var error = "";
-    if (fullname.length == 0) {
+    if (name.length == 0) {
         invalidAlert("full_name");
-        document.getElementById("name-error").innerHTML = "Full name have not been filled in!";
+        document.getElementById("name-error").innerHTML = "Full name has not been filled in!";       
         error = "1";
         return error;
     }
-    if (fullname.length != 0) {
+    if (name.length != 0) {
         validAlert("full_name");
         document.getElementById("name-error").innerHTML = "";
         return "";
     }
 }
 
-
 function validatePhone(phone) {
     var error = "";
     if (phone.length == 0) {
         invalidAlert("phone_number");
-        document.getElementById("phone-error").innerHTML = "Phone number has not been filled in!";
+        document.getElementById("phone-error").innerHTML = "Phone number has not been filled in!";       
         error = "1";
         return error;
     } else if (phone.length != 10 || isNaN(phone)) {
@@ -122,15 +122,15 @@ function validatePhone(phone) {
 
 function validateEmail(email) {
     var error = "";
-    var isValidMail = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/igm;
+    var isValidMail = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/igm; 
     if (email.length == 0) {
         invalidAlert("email");
-        document.getElementById("email-error").innerHTML = "Email has not been filled in!";
+        document.getElementById("email-error").innerHTML = "Email has not been filled in!";       
         error = "1";
         return error;
     } else if (!isValidMail.test(String(email).toLowerCase())) {
         invalidAlert("email");
-        document.getElementById("email-error").innerHTML = "Please input a valid email!";
+        document.getElementById("email-error").innerHTML = "Please input a valid email!";       
         error = "1";
         return error;
     } else {
@@ -150,19 +150,15 @@ function validAlert(idName) {
     document.getElementById(idName).style.border = "1px solid green";
 }
 
-
-
 //Upload avatar
-var loadFile = function (event) {
+var loadFile = function(event) {
     var reader = new FileReader();
-    reader.onload = function () {
+    reader.onload = function(){
         var output = document.getElementById('thumbBox');
         output.src = reader.result;
     };
     reader.readAsDataURL(event.target.files[0]);
 };
-
-
 
 //Extra code to work on view profile back end
 male = document.getElementById("gender_male");

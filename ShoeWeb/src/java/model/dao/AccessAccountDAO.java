@@ -79,20 +79,11 @@ public class AccessAccountDAO {
             pstm.setString(1, acc.getPassword());
             pstm.setString(2, acc.getUserName());
             pstm.executeUpdate();
-            System.out.println(acc.getUserName());
             return true;
         }
         catch(SQLException e){
             e.printStackTrace();
         }
         return false;
-    }
-    
-    public static void main(String[] args) throws ClassNotFoundException, SQLException {
-        AccessAccountDAO aad = new AccessAccountDAO();
-        Account acc =  aad.getAccount("admin", "123");
-        acc.setPassword("123456");
-        aad.changePassWord(acc);
-        System.out.println(acc.getPassword());
     }
 }

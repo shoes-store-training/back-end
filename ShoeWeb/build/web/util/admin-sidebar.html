@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Exo&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css "
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="./css/admin-sidebar.css">  
+    <link href="./util/admin-header.html" rel="import" /> 
+</head>
+
+<body>
+  <div class="lsidenav">
+    <div class="ladmin-status">
+      <div class="ladmin-ava">
+        <img src="img/avatar.jpg" class="lavatar">
+        <p class="ltext-status">Phuongptp</p>
+      </div>
+      <div class="lsearch">
+        <input class="lsearch-txt" type="text" name="" placeholder="Search...">
+        <a class="lsearch-btn" href="#">
+          <i class="fas fa-search"></i>
+        </a>
+      </div>
+    </div>
+    <div>
+      <button class="ldropdown-btn" onclick="toggle()">Customers
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="ldropdown-container">
+        <a href="#" class="lpadding-left">Customers Information</a>
+        <a href="#" class="lpadding-left">Review Feedback</a>
+        <a href="#" class="lpadding-left">Edit Account</a>
+        <a href="#" class="lpadding-left">Block Account</a>
+      </div>
+      <button class="ldropdown-btn" onclick="toggle()">Transaction
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="ldropdown-container">
+        <a href="#" class="lpadding-left">Transaction Status</a>
+        <a href="#" class="lpadding-left">View Transaction</a>
+        <a href="#" class="lpadding-left">Transaction History</a>
+      </div>
+      <button class="ldropdown-btn" onclick="toggle()">News
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="ldropdown-container">
+        <a href="create-category.html" class="lpadding-left2">Create</a>
+        <a href="#" class="lpadding-left2">Update</a>
+        <a href="#" class="lpadding-left2">Delete</a>
+      </div>
+    </div>
+  </div> 
+</body>
+<script src='js/admin-sidebar.js'></script>
+</html>

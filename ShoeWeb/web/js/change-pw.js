@@ -30,9 +30,10 @@ function resetForm() {
 }
 
 saveBtn.onclick = function() {
-    if (validateForm()) {
-        alert("Change password successfully!");
+    if (validateForm() === false) {
+        return validateForm();
     }
+    else alert("Change password successfully!");
 }
 
 function backToViewPage() {
@@ -49,7 +50,6 @@ function validateForm() {
     reason += validateCurrentPw(currentpw);
     reason += validateNewPw(newpw);
     reason += validateRetypePw(retypepw, newpw);
-
     if (reason.length > 1) {
         return false;
     } else {
